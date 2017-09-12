@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         let appTutorialVC = NilTutorialViewController(imagesSet: [#imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence")]) {
             print("Skip button selected!!!")
         }
+        appTutorialVC.setSkipButtonTitle(title: "Close")
         
         self.present(appTutorialVC, animated: true, completion: nil)
         

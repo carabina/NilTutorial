@@ -15,12 +15,13 @@ public final class NilTutorialViewController: UIViewController {
     fileprivate var imageViewAspect:UIViewContentMode = UIViewContentMode.scaleAspectFill
     fileprivate var skipButtonTextColor:UIColor = UIColor.white
     fileprivate var skipButtonTitle:String = "Skip"
-
+    fileprivate var skipButtonIsHide:Bool = false
     
     @IBOutlet fileprivate weak var skipButton:UIButton!{
         didSet{
             skipButton.setTitleColor(self.skipButtonTextColor, for: .normal)
             skipButton.setTitle(self.skipButtonTitle, for: .normal)
+            skipButton.isHidden = self.skipButtonIsHide
         }
     }
     
@@ -71,19 +72,19 @@ public final class NilTutorialViewController: UIViewController {
         self.completion = completion
     }
     
-    func hideSkipButton(){
-        self.skipButton.isHidden = true
+    public func hideSkipButton(){
+        self.skipButtonIsHide = true
     }
     
-    func showSkipButton(){
-        self.skipButton.isHidden = false
+    public func showSkipButton(){
+        self.skipButtonIsHide = false
     }
     
     func setSkipButtonTextColor(textColor:UIColor){
         self.skipButtonTextColor = textColor
     }
     
-    func setSkipButtonTitle(title:String){
+    public func setSkipButtonTitle(title:String){
         self.skipButtonTitle = title
     }
     
