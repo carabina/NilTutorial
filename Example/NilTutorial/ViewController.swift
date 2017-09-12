@@ -18,13 +18,15 @@ class ViewController: UIViewController {
     }
 
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
         
-//        let testVC = NilTutorial()
-//        
-//        self.present(testVC, animated: true, completion: nil)
+        let appTutorialVC = NilTutorialViewController(imagesSet: [#imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence")]) {
+            print("Skip button selected!!!")
+        }
         
+        self.present(appTutorialVC, animated: true, completion: nil)
         
     }
     

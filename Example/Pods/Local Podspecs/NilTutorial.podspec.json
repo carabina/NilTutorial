@@ -18,5 +18,6 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "NilTutorial/Classes/**/*"
+  "source_files": "NilTutorial/Classes/**/*",
+  "resources": "NilTutorial/Classes/*.xib"
 }
