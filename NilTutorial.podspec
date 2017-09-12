@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'NilTutorial/Classes/**/*'
+  s.source_files  = '*.{h,m,swift}'
 
   s.resources = 'NilTutorial/Classes/*.xib'
   
