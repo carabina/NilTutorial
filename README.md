@@ -24,10 +24,20 @@ let appTutorialVC = NilTutorialViewController(imagesSet: []) {
 }
 ```
 
+## Customization
+```swift
+//Hide, Show skip button 
+appTutorialVC.hideSkipButton()
+appTutorialVC.showSkipButton()
+
+//Set SkipButton title 
+appTutorialVC.setSkipButtonTextColor(UIColor.black)
+appTutorialVC.setSkipButtonTitle(title: "Close")
+```
 
 ## Author
 
-nilc.nolan@gmail.com, nilc.nolan@gmail.com
+NilNilNil, nilc.nolan@gmail.com
 
 ## License
 
