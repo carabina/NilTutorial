@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NilTutorial'
-  s.version          = '0.1.2'
+  s.version          = '0.1.1'
   s.summary          = 'Tutorial Page writing in Swift.'
 
 # This description is used to generate tags and improve search results.
@@ -28,9 +28,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'NilTutorial/Classes/**/*'
+  s.source_files  = '*.{h,m,swift}'
 
-  s.resources = 'NilTutorial/Classes/*.xib'
+  # s.resources = 'NilTutorial/Classes/*.xib'
   
   # s.resource_bundles = {
   #   'NilTutorial' => ['NilTutorial/Assets/*.png']
