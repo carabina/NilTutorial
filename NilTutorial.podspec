@@ -30,7 +30,11 @@ Pod::Spec.new do |s|
 
   s.source_files  = '*.{h,m,swift}'
 
+<<<<<<< HEAD
   # s.resources = 'NilTutorial/Classes/*.xib'
+=======
+#   s.resources = 'NilTutorial/Classes/*.xib'
+>>>>>>> ef8dc699fa60828521c1e453e17976d25931ebe4
   
   # s.resource_bundles = {
   #   'NilTutorial' => ['NilTutorial/Assets/*.png']
