@@ -5,12 +5,8 @@
 [![License](https://img.shields.io/cocoapods/l/NilTutorial.svg?style=flat)](http://cocoapods.org/pods/NilTutorial)
 [![Platform](https://img.shields.io/cocoapods/p/NilTutorial.svg?style=flat)](http://cocoapods.org/pods/NilTutorial)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Requirements
-
+  Swift > 3.0
 ## Installation
 
 NilTutorial is available through [CocoaPods](http://cocoapods.org). To install
@@ -19,6 +15,15 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'NilTutorial'
 ```
+## Usages
+```swift
+import NilTutorial
+
+let appTutorialVC = NilTutorialViewController(imagesSet: []) {
+            // Add skip button action here
+}
+```
+
 
 ## Author
 
