@@ -80,7 +80,7 @@ public final class NilTutorialViewController: UIViewController {
         self.skipButtonIsHide = false
     }
     
-    func setSkipButtonTextColor(textColor:UIColor){
+    public func setSkipButtonTextColor(textColor:UIColor){
         self.skipButtonTextColor = textColor
     }
     
@@ -88,13 +88,18 @@ public final class NilTutorialViewController: UIViewController {
         self.skipButtonTitle = title
     }
     
-    func setImageAspect(imageAspect: UIViewContentMode) {
+    public func setImageAspect(imageAspect: UIViewContentMode) {
         self.imageViewAspect = imageAspect
     }
     
     @IBAction func skipButtonDidPress(_ sender: Any) {
+        var isDismiss = false
         self.dismiss(animated: true) {
-            self.completion?()
+            if !isDismiss{ self.completion?() }
+        }
+        if self.completion != nil{
+            isDismiss = true
+            self.completion!()
         }
     }
 }

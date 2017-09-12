@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NilTutorial'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = 'Tutorial Page writing in Swift.'
 
 # This description is used to generate tags and improve search results.

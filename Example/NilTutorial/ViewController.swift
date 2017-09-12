@@ -11,25 +11,43 @@ import NilTutorial
 
 
 class ViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var miniView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
         
         let appTutorialVC = NilTutorialViewController(imagesSet: [#imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence")]) {
             print("Skip button selected!!!")
+            self.miniView.removeAllSubViews()
+            self.removeAllChildViewController()
         }
         appTutorialVC.setSkipButtonTitle(title: "Close")
+        appTutorialVC.setImageAspect(imageAspect: .scaleAspectFill)
+
+        self.configureChildViewController(childController: appTutorialVC, onView: self.miniView)
+    
         
-        self.present(appTutorialVC, animated: true, completion: nil)
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+//        let appTutorialVC = NilTutorialViewController(imagesSet: [#imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence"), #imageLiteral(resourceName: "Cercie_I_Choose_Violence")]) {
+//            print("Skip button selected!!!")
+//        }
+//        appTutorialVC.setSkipButtonTitle(title: "Close")
+//        appTutorialVC.setImageAspect(imageAspect: .scaleAspectFill)
+//        
+//        self.present(appTutorialVC, animated: false, completion: nil)
+        
         
     }
     
 }
+
+
 
